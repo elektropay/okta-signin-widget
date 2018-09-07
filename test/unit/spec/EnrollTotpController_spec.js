@@ -1,11 +1,8 @@
 /* eslint max-params: [2, 26] */
 define([
-  'okta/underscore',
-  'okta/jquery',
-  'vendor/lib/q',
+  'okta',
   '@okta/okta-auth-js/jquery',
   'util/Util',
-  'shared/util/StringUtil',
   'helpers/mocks/Util',
   'helpers/dom/EnrollTotpDeviceTypeForm',
   'helpers/dom/EnrollTotpBarcodeForm',
@@ -27,12 +24,14 @@ define([
   'helpers/xhr/SUCCESS',
   'LoginRouter'
 ],
-function (_, $, Q, OktaAuth, LoginUtil, StringUtil, Util, DeviceTypeForm, BarcodeForm,
+function (Okta, OktaAuth, LoginUtil, Util, DeviceTypeForm, BarcodeForm,
           ManualSetupForm, PassCodeForm, LinkSentConfirmation,  Beacon, Expect,
           $sandbox, resAllFactors, resFactorsWithPush, resTotpEnrollSuccess,
           resPushEnrollSuccess, resPushEnrollSuccessNewQR, resActivateError, resActivatePushEmail,
           resActivatePushSms, resActivatePushTimeout, resSuccess, Router) {
 
+  var { _, $ } = Okta;
+  var { StringUtil } = Okta.internal.util;
   var itp = Expect.itp;
   var tick = Expect.tick;
 

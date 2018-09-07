@@ -12,7 +12,7 @@
 
 define([
   'okta/underscore',
-  'shared/util/Bundles',
+  './Bundles',
   './countryCallingCodes'
 ],
 function (_, bundles, countryCallingCodes) {

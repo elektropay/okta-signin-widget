@@ -67,7 +67,6 @@ module.exports = function (outputFilename) {
             'util/markdownToHtml',
             'util/Bundle.js',
             'util/formatXml.js',
-            'models/modelsBundle',
             'views/datalist/SimpleDataList',
             'views/datalist/Table',
             'views/forms/components/ReadModeBar',

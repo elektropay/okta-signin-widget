@@ -5,7 +5,6 @@ define([
   'okta/jquery',
   '@okta/okta-auth-js/jquery',
   'util/Util',
-  'shared/util/Util',
   'helpers/mocks/Util',
   'helpers/dom/ConsentRequiredForm',
   'helpers/util/Expect',
@@ -14,7 +13,7 @@ define([
   'helpers/xhr/CONSENT_REQUIRED',
   'helpers/xhr/SUCCESS'
 ],
-function (Q, _, $, OktaAuth, LoginUtil, SharedUtil, Util, ConsentRequiredForm, Expect, Router,
+function (Q, _, $, OktaAuth, LoginUtil, Util, ConsentRequiredForm, Expect, Router,
           $sandbox, resConsentRequired, resSuccess) {
 
   var itp = Expect.itp;

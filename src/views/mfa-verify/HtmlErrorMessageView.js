@@ -11,10 +11,11 @@
  */
 
 define([
-  'okta',
-  'shared/views/BaseView'
+  'okta'
 ],
-function (Okta, BaseView) {
+function (Okta) {
+
+  var { BaseView } = Okta.internal.views;
 
   // Have to be unescaped for the html in enroll.windowsHello.error.notConfiguredHtml
   var template = '\

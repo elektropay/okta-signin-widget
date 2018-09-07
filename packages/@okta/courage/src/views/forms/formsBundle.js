@@ -4,6 +4,7 @@ define([
   './BaseInput',
   './components/TextCounterExplain',
   './components/WizardTitle',
+  './components/Toolbar',
   './helpers/EnumTypeHelper',
   './helpers/ErrorBanner',
   './helpers/ErrorParser',
@@ -15,7 +16,8 @@ define([
   './helpers/SchemaFormFactory',
   './helpers/InputRegistry',
 ],
-function (BaseForm, BaseInput, TextCounterExplain, WizardTitle, EnumTypeHelper, ErrorBanner, ErrorParser, FormUtil,
+function (BaseForm, BaseInput, TextCounterExplain, WizardTitle, Toolbar, EnumTypeHelper, 
+  ErrorBanner, ErrorParser, FormUtil,
   InputContainer, InputFactory, InputLabel, InputWrapper, SchemaFormFactory, InputRegistry) {
 
   return {
@@ -25,7 +27,8 @@ function (BaseForm, BaseInput, TextCounterExplain, WizardTitle, EnumTypeHelper, 
     BaseInput: BaseInput,
 
     components: {
-
+      Toolbar, // TODO: fix courage and upgrade to signin widget repo.
+      
       TextCounterExplain: TextCounterExplain,
 
       WizardTitle: WizardTitle

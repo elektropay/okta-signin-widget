@@ -8,6 +8,16 @@ define([
 ],
 function(Okta, TextBox, PasswordBox, CheckBox, Radio, Select) {
 
+  Okta.internal.views.forms.inputs || (Okta.internal.views.forms.inputs = {});
+
+  Object.assign(Okta.internal.views.forms.inputs, {
+    TextBox, 
+    PasswordBox, 
+    CheckBox, 
+    Radio, 
+    Select
+  });
+  
   Okta.registerInput('text', TextBox);
   Okta.registerInput('password', PasswordBox);
   Okta.registerInput('checkbox', CheckBox);
